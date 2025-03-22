@@ -12,6 +12,8 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import RequestLeave from "./pages/RequestLeave/RequestLeave";
 import EmployeesList from "./pages/EmployeesList/EmployeesList";
 
+import CreateLeaveRequest from "./pages/CreateLeaveRequest/CreateLeaveRequest";
+
 // Pages
 // import Login from "./pages/Login/Login";
 // import SignUp from "./pages/SignUp/SignUp";
@@ -55,6 +57,15 @@ function App() {
             <SidebarLayout>
               <EmployeesList />
 
+            </SidebarLayout>
+          }
+        />
+
+        <Route
+          path="/create-request"
+          element={
+            <SidebarLayout>
+              <CreateLeaveRequest />
             </SidebarLayout>
           }
         />
