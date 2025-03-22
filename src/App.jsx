@@ -9,7 +9,8 @@ import { ToastContainer } from "react-toastify";
 
 import SidebarLayout from "./components/layout/SidebarLayout";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-
+import Profile from "./pages/Profile/Profile";
+// import UserProfile from "./pages/Profile/Profile";
 // Pages
 // import Login from "./pages/Login/Login";
 // import SignUp from "./pages/SignUp/SignUp";
@@ -39,6 +40,12 @@ function App() {
         <Route
           path="/"
           element={<SidebarLayout>{/* <Dashboard /> */}</SidebarLayout>}
+        />
+        <Route
+          path="/profile"
+          element={<SidebarLayout>
+            <Profile />
+          </SidebarLayout>}
         />
 
         {/* Admin routes */}

@@ -65,6 +65,7 @@
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { GrNotification } from "react-icons/gr";
 import { MdOutlineNightlight } from "react-icons/md";
+import {Link} from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -77,9 +78,9 @@ const Header = () => {
 
         {/* Name employees */}
         <div className="flex items-center justify-center font-roboto space-x-[17px]">
-          <div className="p-2 bg-white rounded-full">
+          <Link to="/profile" className="p-2 bg-white rounded-full">
             <MdOutlineAccountCircle size={20} />
-          </div>
+          </Link>
 
           <div className="text-[20px] w-[164px] text-nowrap font-semibold text-white">
             DANG THI QUYNH

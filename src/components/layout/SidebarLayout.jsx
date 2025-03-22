@@ -26,6 +26,8 @@ const Layout = ({ children }) => {
         {/* <div className="w-1/6 bg-[#034F75] text-white rounded-2xl shadow-2xl"></div> */}
 
         <Sidebar />
+         {/* Dynamic Content */}
+          <div className="mt-[24px] mx-[44px] w-full flex  justify-center">{children}</div>
       </div>
     </div>
 
