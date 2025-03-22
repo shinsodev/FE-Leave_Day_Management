@@ -1,9 +1,11 @@
-import React from "react";
-import { Space, Table } from "antd";
+import React, { useState } from "react";
+import { Form, Modal, Space, Table } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { Input, Select } from "antd";
 import Search_Input from "../../components/Search_Input/Search_Input";
 import FilterInput from "../../components/FilterInput/FilterInput";
+import { FaPencil } from "react-icons/fa6";
+import { IoTrashBin } from "react-icons/io5";
 
 const columns = [
     {
@@ -41,8 +43,12 @@ const columns = [
         key: "action",
         render: (_, record) => (
             <Space size="middle">
-                <a>Update</a>
-                <a>Delete</a>
+                <button onClick={() => handleUpdateRequest(record)}>
+                    <FaPencil size={20} className="text-yellow-500" />
+                </button>
+                <button onClick={() => handleDeleteRequest(record.id)}>
+                    <IoTrashBin size={20} className="text-red-500" />
+                </button>
             </Space>
         ),
     },
@@ -78,7 +84,16 @@ const EmployessListData = [
     },
 ];
 
+const handleUpdateRequest = (record) => {
+    console.log("me");
+};
+
+const handleDeleteRequest = (id) => {
+    console.log(`delete request ${id}`);
+};
+
 const EmployeesList = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div className="bg-white rounded-xl p-8 shadow-lg">
             <h1 className="text-2xl font-semibold mb-6">All Employees</h1>
@@ -91,7 +106,71 @@ const EmployeesList = () => {
                 columns={columns}
                 dataSource={EmployessListData}
             />
-        </div>
+
+            <Modal
+                title="Update Request"
+                open={isModalOpen}
+                onCancel={() => setIsModalOpen(false)}
+            // onOk={() => console.log("Updated Data:", editData)}
+            >
+                {/* <Form layout="vertical">
+          <Form.Item label="Employee ID">
+            <Input
+              value={editData?.employee_id}
+              onChange={(e) =>
+                setEditData({ ...editData, employee_id: e.target.value })
+              }
+            />
+          </Form.Item>
+          <Form.Item label="Manager ID">
+            <Input
+              value={editData?.manager_id}
+              onChange={(e) =>
+                setEditData({ ...editData, manager_id: e.target.value })
+              }
+            />
+          </Form.Item>
+          <Form.Item label="Start Date">
+            <Input
+              value={editData?.startDate}
+              type="date"
+              onChange={(e) =>
+                setEditData({ ...editData, startDate: e.target.value })
+              }
+            />
+          </Form.Item>
+          <Form.Item label="End Date">
+            <Input
+              value={editData?.endDate}
+              type="date"
+              onChange={(e) =>
+                setEditData({ ...editData, endDate: e.target.value })
+              }
+            />
+          </Form.Item>
+          <Form.Item label="Reason">
+            <Input
+              value={editData?.reason}
+              onChange={(e) =>
+                setEditData({ ...editData, reason: e.target.value })
+              }
+            />
+          </Form.Item>
+
+          <Form.Item label="Status">
+            <Select
+              value={editData?.status}
+              onChange={(value) => setEditData({ ...editData, status: value })}
+            >
+              <Option value="Accept">APPROVED</Option>
+              <Option value="Reject">REJECT</Option>
+              <Option value="Pending">PENDING</Option>
+            </Select>
+          </Form.Item> */}
+                {/* </Form> */}
+            </Modal>
+
+        </div >
     );
 };
 
