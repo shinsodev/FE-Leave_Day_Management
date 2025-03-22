@@ -19,10 +19,21 @@ const Layout = ({ children }) => {
     //     <div className="mt-[48px] mx-[44px]">{children}</div>
     //   </div>
     // </div>
-
-    <>
+    <div className="bg-slate-200">
       <Header />
-    </>
+      <div className="flex flex-row min-h-screen">
+        {/* Sidebar */}
+        {/* <div className="w-1/6 bg-[#034F75] text-white rounded-2xl shadow-2xl"></div> */}
+
+        <Sidebar />
+      </div>
+    </div>
+
+    // <>
+    //   <Header />
+
+    //   <Sidebar />
+    // </>
   );
 };
 

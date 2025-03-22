@@ -62,11 +62,37 @@
 // export default Header;
 
 // import React from "react";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { GrNotification } from "react-icons/gr";
+import { MdOutlineNightlight } from "react-icons/md";
 
 const Header = () => {
   return (
     <>
-      <div className="h-[80px] px-24px"></div>
+      <div className="h-[80px] px-[24px] bg-[#7667EA] flex items-center justify-between shadow-lg">
+        {/* Logo  */}
+        <div className="text-[46px] w-[246px] text-white font-poppins font-medium">
+          A Plus Plus
+        </div>
+
+        {/* Name employees */}
+        <div className="flex items-center justify-center font-roboto space-x-[17px]">
+          <div className="p-2 bg-white rounded-full">
+            <MdOutlineAccountCircle size={20} />
+          </div>
+
+          <div className="text-[20px] w-[164px] text-nowrap font-semibold text-white">
+            DANG THI QUYNH
+          </div>
+          <div>|</div>
+          <div className="p-2 bg-white rounded-full">
+            <GrNotification size={20} />
+          </div>
+          <div className="p-2 bg-white rounded-full">
+            <MdOutlineNightlight size={20} />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
