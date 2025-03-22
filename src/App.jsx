@@ -40,8 +40,11 @@ function App() {
 
         <Route
           path="/"
-          // element={<SidebarLayout>{/* <Dashboard /> */}</SidebarLayout>}
-          element={<RequestLeave />}
+          element={
+            <SidebarLayout>
+              <RequestLeave />
+            </SidebarLayout>
+          }
         />
 
         {/* Admin routes */}
