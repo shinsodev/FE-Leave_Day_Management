@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify";
 import SidebarLayout from "./components/layout/SidebarLayout";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import RequestLeave from "./pages/RequestLeave/RequestLeave";
+import EmployeesList from "./pages/EmployeesList/EmployeesList";
 
 import CreateLeaveRequest from "./pages/CreateLeaveRequest/CreateLeaveRequest";
 
@@ -41,10 +42,21 @@ function App() {
         {/* <Route path="/" element={<HomePage />} /> */}
 
         <Route
-          path="/"
+          path="/request-leave"
           element={
             <SidebarLayout>
               <RequestLeave />
+
+            </SidebarLayout>
+          }
+        />
+
+        <Route
+          path="/employees-list"
+          element={
+            <SidebarLayout>
+              <EmployeesList />
+
             </SidebarLayout>
           }
         />
