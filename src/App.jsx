@@ -13,6 +13,7 @@ import RequestLeave from "./pages/RequestLeave/RequestLeave";
 import EmployeesList from "./pages/EmployeesList/EmployeesList";
 
 import CreateLeaveRequest from "./pages/CreateLeaveRequest/CreateLeaveRequest";
+import CreateEmployees from "./pages/CreateEmployees/CreateEmployees";
 import Profile from "./pages/Profile/Profile";
 
 // Pages
@@ -75,6 +76,15 @@ function App() {
           element={
             <SidebarLayout>
               <CreateLeaveRequest />
+            </SidebarLayout>
+          }
+        />
+
+        <Route
+          path="/create-employees"
+          element={
+            <SidebarLayout>
+              <CreateEmployees />
             </SidebarLayout>
           }
         />

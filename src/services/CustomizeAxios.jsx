@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "",
+  baseURL: "https://leavedaymanagement.onrender.com",
 });
 
 // // Add a response interceptor
