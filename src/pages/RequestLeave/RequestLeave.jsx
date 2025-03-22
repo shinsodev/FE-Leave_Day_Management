@@ -88,48 +88,13 @@ const RequestLeavedata = [
     },
 ];
 
-const options = [
-    {
-        value: "zhejiang",
-        label: "Zhejiang",
-    },
-    {
-        value: "jiangsu",
-        label: "Jiangsu",
-    },
-];
-
 const RequestLeave = () => {
     return (
         <div className="bg-white rounded-xl p-8 shadow-lg">
             <h1 className="text-2xl font-semibold mb-6">Request Leave</h1>
-
-            {/* <Space direction="vertical" size="middle">
-                <Space.Compact size="large">
-                    <Input addonBefore={<SearchOutlined />} placeholder="large size" />
-                </Space.Compact>
-            </Space>
-
-            <Select defaultValue=".com">
-                <Option value=".com">.com</Option>
-                <Option value=".jp">.jp</Option>
-                <Option value=".cn">.cn</Option>
-                <Option value=".org">.org</Option>
-            </Select> */}
-            {/* Search and Sort */}
             <div className="flex items-center justify-between mb-6">
-                <div className="relative w-1/3">
-                    <Input
-                        size="large"
-                        prefix={<SearchOutlined />}
-                        placeholder="Search"
-                        className="w-full rounded-lg"
-                    />
-                </div>
-                <Select defaultValue="Newest" size="large" className="w-40">
-                    <Option value="Newest">Newest</Option>
-                    <Option value="Oldest">Oldest</Option>
-                </Select>
+                <Search_Input />
+                <FilterInput />
             </div>
 
             <Table
@@ -137,11 +102,6 @@ const RequestLeave = () => {
                 columns={columns}
                 dataSource={RequestLeavedata}
             />
-
-            {/* Pagination
-            <div className="flex justify-center mt-8">
-                <Pagination defaultCurrent={1} total={40} pageSize={5} />
-            </div> */}
         </div>
     );
 };
