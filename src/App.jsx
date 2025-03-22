@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 
 import SidebarLayout from "./components/layout/SidebarLayout";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import RequestLeave from "./pages/RequestLeave/RequestLeave";
 
 // Pages
 // import Login from "./pages/Login/Login";
@@ -36,9 +37,11 @@ function App() {
 
         {/* All roles */}
         {/* <Route path="/" element={<HomePage />} /> */}
+
         <Route
           path="/"
-          element={<SidebarLayout>{/* <Dashboard /> */}</SidebarLayout>}
+          // element={<SidebarLayout>{/* <Dashboard /> */}</SidebarLayout>}
+          element={<RequestLeave />}
         />
 
         {/* Admin routes */}
