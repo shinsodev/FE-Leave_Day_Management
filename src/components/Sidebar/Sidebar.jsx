@@ -209,7 +209,7 @@ const Sidebar = () => {
           className={({ isActive }) => getNavLinkClass(isActive)}
         >
           <LuMessageSquareQuote size={18} />
-          <div>Request</div>
+          <div>Request List</div>
         </NavLink>
 
         <NavLink
@@ -217,7 +217,7 @@ const Sidebar = () => {
           className={({ isActive }) => getNavLinkClass(isActive)}
         >
           <LuMessageSquareQuote size={18} />
-          <div>Request</div>
+          <div>Create Request</div>
         </NavLink>
 
         <NavLink

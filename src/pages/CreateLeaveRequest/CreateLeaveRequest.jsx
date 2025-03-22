@@ -1,6 +1,6 @@
 const CreateLeaveRequest = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center">
       <div className="bg-white p-6 rounded-lg shadow-lg w-[650px]">
         <h2 className="text-center text-lg font-semibold mb-4">
           CREATE A LEAVE REQUEST

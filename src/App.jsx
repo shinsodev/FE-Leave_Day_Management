@@ -13,10 +13,11 @@ import RequestLeave from "./pages/RequestLeave/RequestLeave";
 import EmployeesList from "./pages/EmployeesList/EmployeesList";
 
 import CreateLeaveRequest from "./pages/CreateLeaveRequest/CreateLeaveRequest";
+import Profile from "./pages/Profile/Profile";
 
 // Pages
-// import Login from "./pages/Login/Login";
-// import SignUp from "./pages/SignUp/SignUp";
+import Login from "./pages/Login/Login";
+import SignUp from "./pages/SignUp/SignUp";
 // import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 // import ResetPassword from "./pages/ResetPassword/ResetPassword";
 
@@ -33,20 +34,29 @@ function App() {
       <ScrollToTop />
       <Routes>
         {/* Auth routes */}
-        {/* <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
+        {/* <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} /> */}
 
         {/* All roles */}
         {/* <Route path="/" element={<HomePage />} /> */}
+        <Route path="/" element={<SidebarLayout></SidebarLayout>} />
+
+        <Route
+          path="/profile"
+          element={
+            <SidebarLayout>
+              <Profile />
+            </SidebarLayout>
+          }
+        />
 
         <Route
           path="/request-leave"
           element={
             <SidebarLayout>
               <RequestLeave />
-
             </SidebarLayout>
           }
         />
@@ -56,7 +66,6 @@ function App() {
           element={
             <SidebarLayout>
               <EmployeesList />
-
             </SidebarLayout>
           }
         />
