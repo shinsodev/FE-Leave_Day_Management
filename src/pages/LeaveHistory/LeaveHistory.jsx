@@ -84,8 +84,7 @@ const RequestLeavedata = [
         status: "Accept",
     },
 ];
-
-const RequestLeave = () => {
+const LeaveHistory = () => {
     return (
         <div className="bg-white rounded-xl p-8 shadow-lg">
             <h1 className="text-2xl font-semibold mb-6">Request Leave</h1>
@@ -101,6 +100,6 @@ const RequestLeave = () => {
             />
         </div>
     );
-};
+}
 
-export default RequestLeave;
+export default LeaveHistory

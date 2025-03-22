@@ -85,7 +85,7 @@ const RequestLeavedata = [
     },
 ];
 
-const RequestLeave = () => {
+const RequestHistory = () => {
     return (
         <div className="bg-white rounded-xl p-8 shadow-lg">
             <h1 className="text-2xl font-semibold mb-6">Request Leave</h1>
@@ -103,4 +103,4 @@ const RequestLeave = () => {
     );
 };
 
-export default RequestLeave;
+export default RequestHistory;
