@@ -50,7 +50,7 @@ function App() {
         />
 
         <Route
-          path="/request"
+          path="/create-request"
           element={
             <SidebarLayout>
               <CreateLeaveRequest />
