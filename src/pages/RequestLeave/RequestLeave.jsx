@@ -4,6 +4,8 @@ import { FaPencil } from "react-icons/fa6";
 import { IoTrashBin } from "react-icons/io5";
 import Search_Input from "../../components/Search_Input/Search_Input";
 import FilterInput from "../../components/FilterInput/FilterInput";
+import { Select } from "antd";
+const { Option } = Select;
 
 const RequestLeave = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,9 +34,9 @@ const RequestLeave = () => {
       dataIndex: "status",
       render: (status) => {
         let color =
-          status === "Accept" ? "green" : status === "Reject" ? "red" : "gray";
+          status === "Accept" ? "green" : status === "Reject" ? "red" : "gold";
         return <Tag color={color}>{status.toUpperCase()}</Tag>;
-      },
+      }
     },
     {
       title: "Action",
@@ -70,6 +72,15 @@ const RequestLeave = () => {
       endDate: "02/05/2025",
       reason: "Vacation",
       status: "Pending",
+    },
+    {
+      id: "3",
+      employee_id: "Jane Doe",
+      manager_id: "Bob Johnson",
+      startDate: "02/01/2025",
+      endDate: "02/05/2025",
+      reason: "Vacation",
+      status: "Reject",
     },
   ];
 
@@ -136,8 +147,20 @@ const RequestLeave = () => {
               }
             />
           </Form.Item>
+
+          <Form.Item label="Status">
+            <Select
+              value={editData?.status}
+              onChange={(value) => setEditData({ ...editData, status: value })}
+            >
+              <Option value="Accept">APPROVED</Option>
+              <Option value="Reject">REJECT</Option>
+              <Option value="Pending">PENDING</Option>
+            </Select>
+          </Form.Item>
         </Form>
       </Modal>
+
     </div>
   );
 };
