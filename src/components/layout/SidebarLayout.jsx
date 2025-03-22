@@ -25,15 +25,11 @@ const Layout = ({ children }) => {
         {/* Sidebar */}
         {/* <div className="w-1/6 bg-[#034F75] text-white rounded-2xl shadow-2xl"></div> */}
         <Sidebar />
-        <div className="mt-[48px] mx-[44px]">{children}</div>
+        <div className="mt-[48px] mx-[44px] w-full flex justify-center">
+          {children}
+        </div>
       </div>
     </div>
-
-    // <>
-    //   <Header />
-
-    //   <Sidebar />
-    // </>
   );
 };
 
